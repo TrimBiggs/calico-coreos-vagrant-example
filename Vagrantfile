@@ -132,7 +132,7 @@ Vagrant.configure("2") do |config|
       config.vm.provision :shell, :inline => "chmod +x calicoctl"
       config.vm.provision :shell, :inline => "sudo modprobe ip6_tables"
       config.vm.provision :shell, :inline => "sudo modprobe xt_set"
-      config.vm.provision "docker", version: "docker-1.7.0-dev", images: ["calico/node:#{CALICO_DOCKER_VER}", "busybox:latest"]
+      config.vm.provision "docker", version: "1.7.0-dev", images: ["calico/node:#{CALICO_DOCKER_VER}", "busybox:latest"]
     end
   end
 end
